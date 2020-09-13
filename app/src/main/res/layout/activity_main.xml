@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appname"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:textSize="34sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:gravity="center"
+        android:fontFamily="cursive"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/scannedResult"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan Now!"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:background="#475EDC"
+        android:fontFamily="sans-serif"
+        android:id="@+id/scanBtn"
+         />
+
+    <Button
+        android:id="@+id/clearResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scannedResult"
+        android:text="clear all"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@android:color/transparent"
+        android:layout_alignEnd="@id/scannedResult"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/scannedResult"
+        android:hint="No data found"
+        android:padding="10dp"
+        android:textIsSelectable="true"
+        android:background="@drawable/result_tv"
+        android:textColor="@android:color/black"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
